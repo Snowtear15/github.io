@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Office Listings - Hamara Apna Office</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="top-bar">
+        <p>Email: hamaraapnaoffice@gmail.com | Phone: +91 9811568311</p>
+    </div>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="Resources/logo_final-removebg-preview.png" alt="Logo"></a>
+        </div>
+        <div class="menu-toggle" id="menu-toggle">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="listings.html">Listings</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="listings">
+            <h2>Available Office Spaces</h2>
+            <div class="search-bar">
+                <input type="text" id="search" placeholder="Search by location">
+            </div>
+            <div class="office-list">
+                <div class="office" data-location="South Extension">
+                    <img src="Resources/nastuh-abootalebi-eHD8Y1Znfpk-unsplash.jpg" alt="Office 1">
+                    <h3>Office in South Extension 2</h3>
+                    <p>Prime location with all modern amenities. Ideal for small to medium-sized teams.</p>
+                </div>
+                <div class="office" data-location="Nehru Place">
+                    <img src="Resources/petr-magera-BN7UlHMejko-unsplash.jpg" alt="Office 2">
+                    <h3>Office in Nehru Place</h3>
+                    <p>Strategically located with excellent connectivity. Suitable for IT and tech companies.</p>
+                </div>
+                <div class="office" data-location="Bikaji Kama Place">
+                    <img src="Resources/nastuh-abootalebi-eHD8Y1Znfpk-unsplash.jpg" alt="Office 3">
+                    <h3>Office in Bikaji Kama Place</h3>
+                    <p>Spacious and well-furnished office space. Perfect for startups and creative agencies.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        // JavaScript for filtering offices based on location
+        document.addEventListener('DOMContentLoaded', () => {
+            const searchInput = document.getElementById('search');
+            const offices = document.querySelectorAll('.office');
+
+            searchInput.addEventListener('input', () => {
+                const searchTerm = searchInput.value.trim().toLowerCase();
+
+                offices.forEach(office => {
+                    const location = office.dataset.location.toLowerCase();
+                    if (location.includes(searchTerm)) {
+                        office.style.display = 'block';
+                    } else {
+                        office.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+    <footer>
+        <div class="container">
+            <div class="footer-section">
+                <p>Email: hamaraapnaoffice@gmail.com</p>
+                <p>Phone: +91 9811568311</p>
+            </div>
+            <div class="footer-section social-icons">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fas fa-envelope"></i></a>
+            </div>
+            <div class="footer-section">
+                <p>
+                    301 South Ext Plaza 1, Leela Ram Market, South Extension 2, New
+                    Delhi, India
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/1bdddd6c24.js"></script>
+</body>
+</html>

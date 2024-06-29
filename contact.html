@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Hamara Apna Office</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <div class="top-bar">
+        <p>Email: hamaraapnaoffice@gmail.com | Phone: +91 9811568311</p>
+    </div>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="Resources/logo_final-removebg-preview.png" alt="Logo"></a>
+        </div>
+        <div class="menu-toggle" id="menu-toggle">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="listings.html">Listings</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="contact-form">
+            <h2>Contact Us</h2>
+            <form action="submit_form.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required />
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required />
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required />
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer-section">
+                <p>Email: hamaraapnaoffice@gmail.com</p>
+                <p>Phone: +91 9811568311</p>
+            </div>
+            <div class="footer-section social-icons">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fas fa-envelope"></i></a>
+            </div>
+            <div class="footer-section">
+                <p>
+                    301 South Ext Plaza 1, Leela Ram Market, South Extension 2, New
+                    Delhi, India
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/1bdddd6c24.js"></script>
+</body>
+</html>
